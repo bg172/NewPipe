@@ -274,8 +274,9 @@ public final class Localization {
         } else {
             output = String.format(Locale.US, "%d:%02d", minutes, seconds);
         }
+        final String durationPrefix = "⏱";
         final String durationPostfix = isDurationComplete ? "" : "+";
-        return output + durationPostfix;
+        return durationPrefix + output + durationPostfix;
     }
 
     /**
